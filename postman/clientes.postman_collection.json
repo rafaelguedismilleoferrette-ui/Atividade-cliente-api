@@ -1,0 +1,83 @@
+{
+  "info": {
+    "name": "Clientes",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Listar Clientes",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:8080/clientes/listar-clientes"
+      },
+      "response": []
+    },
+    {
+      "name": "Salvar Cliente",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nome\": \"Cliente Teste 2\",\r\n    \"tipoPessoa\": \"PF\",\r\n    \"cpfCnpj\": \"11111111112\",\r\n    \"telefone\": \"44999999999\",\r\n    \"email\": \"emailteste@gmail.com\",\r\n    \"logradouro\": \"Avenida Teste\",\r\n    \"numero\": \"S/N\",\r\n    \"bairro\": \"Centro\",\r\n    \"cep\": \"00000000\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:8080/clientes/salvar-cliente"
+      },
+      "response": []
+    },
+    {
+      "name": "Buscar Cliente por ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:8080/clientes/buscar-cliente/1"
+      },
+      "response": []
+    },
+    {
+      "name": "Atualizar Cliente",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": "http://localhost:8080/clientes/atualizar-cliente/1",
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nome\": \"Cliente Teste 2\",\r\n    \"tipoPessoa\": \"PF\",\r\n    \"cpfCnpj\": \"11111111112\",\r\n    \"telefone\": \"44999999999\",\r\n    \"email\": \"emailteste@gmail.com\",\r\n    \"logradouro\": \"Avenida Teste\",\r\n    \"numero\": \"S/N\",\r\n    \"bairro\": \"Centro\",\r\n    \"cep\": \"00000000\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Deletar Cliente",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": "http://localhost:8080/clientes/deletar-cliente/1"
+      },
+      "response": []
+    }
+  ]
+}
